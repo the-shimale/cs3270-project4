@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ade05dbc-41cf-43fa-8eb6-28e09e50da32" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sudoku.kt" afterPath="$PROJECT_DIR$/src/sudoku.kt" />
-    </list>
+    <list default="true" id="ade05dbc-41cf-43fa-8eb6-28e09e50da32" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +15,8 @@
       <file leaf-file-name="sudoku.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sudoku.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            <state relative-caret-position="200">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -237,12 +234,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511374910193</updated>
       <workItem from="1511374916254" duration="822000" />
-      <workItem from="1511754074332" duration="521000" />
+      <workItem from="1511754074332" duration="905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1343000" />
+    <option name="totallyTimeSpent" value="1727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="20" width="1400" height="980" extended-state="0" />
@@ -300,8 +297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sudoku.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        <state relative-caret-position="200">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
