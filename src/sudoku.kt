@@ -12,6 +12,7 @@ fun main(args: Array<String>) {
 // reads file containing sudoku puzzle to solve and stores
 // the values into board
 fun loadFromFile() {
+    //val path = System.getProperty("user.dir")
     val file = File("sudoku-test1.txt")
     val bufferedReader = file.bufferedReader()
     val text:List<String> = bufferedReader.readLines()
@@ -26,5 +27,23 @@ fun loadFromFile() {
         }
         j = 0
         ++i
+    }
+}
+
+fun print(args: Array<String>) {
+    for (row in 0 until 9) {
+        for (col in 0 until 9) {
+            if (col == 2 || col == 5)
+                print("${board[row][col]} | ")
+            else
+                print("${board[row][col]} ")
+        }
+        if (row == 2 || row == 5) {
+            println()
+            print("------+-------+------")
+            println()
+        }
+        else
+            println()
     }
 }
