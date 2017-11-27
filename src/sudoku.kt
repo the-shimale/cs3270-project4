@@ -6,16 +6,11 @@ import java.io.InputStream
 var board=Array(9, {Array(9,{0})})
 
 fun main(args: Array<String>) {
-//    val inputStream: InputStream = File("sudoku-test1.txt").inputStream()
-//
-//    val inputString = inputStream.bufferedReader().use { it.readText() }
-//    println(inputString)
-//    for(line in inputString) {
-//        print(line)
-//    }
     loadFromFile()
 }
 
+// reads file containing sudoku puzzle to solve and stores
+// the values into board
 fun loadFromFile() {
     val file = File("sudoku-test1.txt")
     val bufferedReader = file.bufferedReader()
@@ -25,14 +20,11 @@ fun loadFromFile() {
     for(line in text){
         for(char in line) {
             if(!char.isWhitespace()) {
-                val num = char.toInt()
-                print(char)
-//                board[i][j] = char.toInt()
-//                ++j
+                board[i][j] = (char - '0')
+                ++j
             }
         }
-        println()
-//        j = 0
-//        ++i
+        j = 0
+        ++i
     }
 }
