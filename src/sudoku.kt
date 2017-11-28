@@ -5,10 +5,11 @@ import java.io.InputStream
 // global 2D array representing a 9x9 board with all cells initialized to 0
 var board=Array(9, {Array(9,{0})})
 
-// class to represent the coordinates of a
-// point or cell on the sudoku board
-class Point(var row: Int, var col: Int) {
-    // incomplete!
+// class to represent the coordinates of a point or cell on the sudoku board
+// initialize row and col to 0 by default
+class Point {
+    var row: Int = 0
+    var col: Int = 0
 }
 
 fun main(args: Array<String>) {
