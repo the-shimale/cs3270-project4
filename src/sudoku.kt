@@ -1,3 +1,10 @@
+// CS 3270 Vanderbilt University
+// Name: Able Shi and Austin Wilms
+// VUnetID: shiza and wilmsad
+// Email: zaixing.a.shi@vanderbilt.edu and austin.d.wilms@vanderbilt.edu
+// Honor Statement: We have neither given nor received unauthorized help on this assignment
+// Description: Kotlin implementation of Sudoku class
+
 import java.util.*
 import java.io.File
 import java.io.InputStream
@@ -76,11 +83,11 @@ fun solve(): Boolean {
             if(validOnRowCol(cell.row, cell.col, num) &&
                     validInSquare(cell.row - (cell.row % offset),
                             cell.col - (cell.col % offset), num)) {
-                board[cell.row][cell.col] = num;
+                board[cell.row][cell.col] = num
                 if (solve()) {
                     return true
                 }
-                board[cell.row][cell.col] = 0;
+                board[cell.row][cell.col] = 0
             }
             ++num
         }
