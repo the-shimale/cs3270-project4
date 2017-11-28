@@ -62,7 +62,29 @@ fun print() {
 // The entry point for your solver.
 // Returns true if a solution was found, otherwise returns false.
 fun solve(): Boolean {
-    // replace this will actual implementation
+    // find an empty cell
+    val start = Point()
+    val cell = findEmpty(start)
+    if(cell.row == BOARD_SIZE && cell.col == BOARD_SIZE) {
+        return true
+    } else {
+        var num = 1
+        while(num <= BOARD_SIZE) {
+            val sqroot = Math.sqrt(BOARD_SIZE.toDouble())
+            val offset = sqroot.toInt()
+            // use modulo to get to a square and remain within it
+            if(validOnRowCol(cell.row, cell.col, num) &&
+                    validInSquare(cell.row - (cell.row % offset),
+                            cell.col - (cell.col % offset), num)) {
+                board[cell.row][cell.col] = num;
+                if (solve()) {
+                    return true
+                }
+                board[cell.row][cell.col] = 0;
+            }
+            ++num
+        }
+    }
     return false
 }
 
