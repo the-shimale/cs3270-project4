@@ -2,8 +2,11 @@ import java.util.*
 import java.io.File
 import java.io.InputStream
 
+// global constant representing board size
+val BOARD_SIZE = 9
+
 // global 2D array representing a 9x9 board with all cells initialized to 0
-var board=Array(9, {Array(9,{0})})
+var board=Array(BOARD_SIZE, {Array(BOARD_SIZE,{0})})
 
 // class to represent the coordinates of a point or cell on the sudoku board
 // initialize row and col to 0 by default
@@ -65,7 +68,22 @@ fun solve(): Boolean {
 
 // Returns an empty point on the Sudoku board
 fun findEmpty(pt: Point): Point {
-    // replace this will actual implementation
+    var row = 0
+    var col = 0
+    while(row < BOARD_SIZE) {
+        while(col < BOARD_SIZE) {
+            if(board[row][col] == 0) {
+                pt.row = row
+                pt.col = col
+                return pt
+            }
+            ++col
+        }
+        col = 0
+        ++row
+    }
+    pt.row = BOARD_SIZE
+    pt.col = BOARD_SIZE
     return pt
 }
 
