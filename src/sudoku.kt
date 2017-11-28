@@ -5,6 +5,12 @@ import java.io.InputStream
 // global 2D array representing a 9x9 board with all cells initialized to 0
 var board=Array(9, {Array(9,{0})})
 
+// class to represent the coordinates of a
+// point or cell on the sudoku board
+class Point(var row: Int, var col: Int) {
+    // incomplete!
+}
+
 fun main(args: Array<String>) {
     loadFromFile()
     print()
@@ -30,6 +36,7 @@ fun loadFromFile() {
     }
 }
 
+// Prints the current puzzle contents to the screen in a nicely formatted manner.
 fun print() {
     for (row in 0 until 9) {
         for (col in 0 until 9) {
@@ -47,3 +54,32 @@ fun print() {
             println()
     }
 }
+
+// The entry point for your solver.
+// Returns true if a solution was found, otherwise returns false.
+fun solve(): Boolean {
+    // replace this will actual implementation
+    return false
+}
+
+// Returns an empty point on the Sudoku board
+fun findEmpty(pt: Point): Point {
+    // replace this will actual implementation
+    return pt
+}
+
+// Determines if position is a valid location for num on the row and column
+// Returns true if position is safe for num, else returns false
+fun validOnRowCol(row: Int, col: Int, num: Int): Boolean {
+    // replace this will actual implementation
+    return false
+}
+
+// Determines if position is a valid location for num in a 3x3 square
+// Returns true if position is safe for num, else returns false
+fun validInSquare(row: Int, col: Int, num: Int): Boolean {
+    // replace this will actual implementation
+    return false
+}
+
+// Include some function to record the running time of the program???
