@@ -8,6 +8,7 @@
 import java.util.*
 import java.io.File
 import java.io.InputStream
+import kotlin.system.measureTimeMillis
 
 // global constant representing board size
 val BOARD_SIZE = 9
@@ -23,8 +24,18 @@ class Point {
 }
 
 fun main(args: Array<String>) {
-    loadFromFile()
-    print()
+    val execTime = measureTimeMillis {
+        loadFromFile()
+        println("Sudoku puzzle to solve: \n")
+        print()
+        if(solve()) {
+            println("\nSolved Sudoku puzzle: \n")
+            print()
+        } else {
+            println("\nNo Solution")
+        }
+    }
+    print("\nTime used: $execTime ms")
 }
 
 // reads file containing sudoku puzzle to solve and stores
@@ -134,8 +145,8 @@ fun validOnRowCol(row: Int, col: Int, num: Int): Boolean {
 // Determines if position is a valid location for num in a 3x3 square
 // Returns true if position is safe for num, else returns false
 fun validInSquare(row: Int, col: Int, num: Int): Boolean {
-    for (i in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
-        for (j in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
+    for(i in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
+        for(j in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
             if (board[i + row][j + col] == num) {
                 return false
             }
