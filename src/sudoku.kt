@@ -119,15 +119,29 @@ fun findEmpty(pt: Point): Point {
 // Determines if position is a valid location for num on the row and column
 // Returns true if position is safe for num, else returns false
 fun validOnRowCol(row: Int, col: Int, num: Int): Boolean {
-    // replace this will actual implementation
-    return false
+    for (i in 0 until BOARD_SIZE) {
+        if (i != col && num == board[row][i]) { //for col
+            return false
+        }
+
+        if (i != row && num == board[i][col]) { //for row
+            return false
+        }
+    }
+    return true
 }
 
 // Determines if position is a valid location for num in a 3x3 square
 // Returns true if position is safe for num, else returns false
 fun validInSquare(row: Int, col: Int, num: Int): Boolean {
-    // replace this will actual implementation
-    return false
+    for (i in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
+        for (j in 0 until Math.sqrt(BOARD_SIZE.toDouble()).toInt()) {
+            if (board[i + row][j + col] == num) {
+                return false
+            }
+        }
+    }
+    return true
 }
 
 // Include some function to record the running time of the program???
