@@ -5,9 +5,7 @@
 // Honor Statement: We have neither given nor received unauthorized help on this assignment
 // Description: Kotlin implementation of Sudoku class
 
-import java.util.*
 import java.io.File
-import java.io.InputStream
 import kotlin.system.measureTimeMillis
 
 // global constant representing board size
@@ -27,10 +25,10 @@ fun main(args: Array<String>) {
     val execTime = measureTimeMillis {
         loadFromFile()
         println("Sudoku puzzle to solve: \n")
-        print()
+        printBoard()
         if(solve()) {
             println("\nSolved Sudoku puzzle: \n")
-            print()
+            printBoard()
         } else {
             println("\nNo Solution")
         }
@@ -59,7 +57,7 @@ fun loadFromFile() {
 }
 
 // Prints the current puzzle contents to the screen in a nicely formatted manner.
-fun print() {
+fun printBoard() {
     for (row in 0 until 9) {
         for (col in 0 until 9) {
             if (col == 2 || col == 5)
@@ -154,5 +152,3 @@ fun validInSquare(row: Int, col: Int, num: Int): Boolean {
     }
     return true
 }
-
-// Include some function to record the running time of the program???
