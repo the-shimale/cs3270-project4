@@ -39,7 +39,8 @@ fun main(args: Array<String>) {
 // reads file containing sudoku puzzle to solve and stores
 // the values into board
 fun loadFromFile() {
-    val file = File("sudoku-test1.txt")
+    val path = System.getProperty("user.dir")
+    val file = File("$path\\sudoku-test1.txt")
     val bufferedReader = file.bufferedReader()
     val text:List<String> = bufferedReader.readLines()
     var i = 0
