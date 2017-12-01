@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
 // the values into board
 fun loadFromFile() {
     val path = System.getProperty("user.dir")
-    val file = File("$path\\sudoku-test1.txt")
+    val file = File("$path/sudoku-test1.txt")
     val bufferedReader = file.bufferedReader()
     val text:List<String> = bufferedReader.readLines()
     var i = 0
